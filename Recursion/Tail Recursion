@@ -1,5 +1,6 @@
 //Tail Recursion
 //Function has no operations after call itself.
+
 #include <stdio.h>
 void Tail(int);
 
