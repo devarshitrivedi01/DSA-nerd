@@ -16,6 +16,7 @@ int main()
 
     printf("Answer is %d",Fib(s));
     printf("\n");
+    return 0;
 }
 
 int Fib(int s)
