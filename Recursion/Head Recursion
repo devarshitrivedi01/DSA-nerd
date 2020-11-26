@@ -1,0 +1,28 @@
+//Head Recursion
+
+#include <stdio.h>
+void Head(int);
+
+int main()
+{
+  int x;
+  
+  printf("Enter X value: "); //Give a value you want to insert
+  scanf("%d",&x);
+  printf("\n");
+  
+  printf("Head Recursion: "); //Printing Head Recursion
+  Head(x);
+  printf("\n");
+
+  return 0;
+}
+
+void Head(int n) //Head Recursion Ex. 1 2 3 4 ... n
+{
+  if(n>0)
+  {
+    Head(n-1);
+    printf("%d ",n);
+  }
+}
