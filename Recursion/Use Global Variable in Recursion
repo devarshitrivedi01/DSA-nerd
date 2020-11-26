@@ -15,6 +15,7 @@ int main()
     printf("\n");
     printf("You get %d",add_global(n));
     printf("\n");
+    return 0;
 }
 
 int add_global(int n)
