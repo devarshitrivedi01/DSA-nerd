@@ -21,7 +21,7 @@ I am currently doing work on it. So, in some days I will complete this repositor
 
 ## Fundamental Concepts
 ### 1. Recursion
-  * :blue_book:[Types of Recursion]
+  :blue_book:* [Types of Recursion]
     * [Tail Recursion](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Recursion/Tail%20Recursion)
     * [Head Recursion](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Recursion/Head%20Recursion)
     * [Tree Recursion](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Recursion/Tree%20Recursion)
