@@ -1,0 +1,26 @@
+//Tree Recursion
+//Any Function which call itself more than one time it forms Tree Recursion.
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void tree(int);
+
+int main()
+{
+    int v;
+    printf("\n Enter any value");
+    scanf("%d",&v);
+    tree(v);
+    return 0;
+}
+
+void tree(int n)
+{
+    if(n>0)
+    {
+        printf("%d ",n);
+        tree(n-1);
+        tree(n-1);
+    }
+}
