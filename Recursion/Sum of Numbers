@@ -1,0 +1,25 @@
+//Sum of Numbers Recursion
+#include <stdio.h>
+#include <stdlib.h>
+
+int add(int);
+
+int main()
+{
+    int n;
+    printf("please enter value of n: ");
+    scanf("%d",&n);
+
+    printf("\n");
+    printf("You get %d",add(n));
+    printf("\n");
+}
+
+int add(int n)
+{
+    if(n>0)
+    {
+      return add(n-1)+n;
+    }
+    return 0;
+}
