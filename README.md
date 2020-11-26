@@ -25,7 +25,7 @@ I am currently doing work on it. So, in some days I will complete this repositor
   * [Tail Recursion](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Recursion/Tail%20Recursion)
   * [Head Recursion](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Recursion/Head%20Recursion)
   * [Tree Recursion](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Recursion/Tree%20Recursion)
-  
+  * [Indirect Recursion](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Recursion/Indirect%20Recursion)
   :blue_book: Other Codes
   * [Use Global Variable in Recursion](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Recursion/Use%20Global%20Variable%20in%20Recursion)
   * [Use Static Variable in Recursion](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Recursion/Use%20Static%20Variable%20in%20Recursion)
