@@ -21,6 +21,7 @@ int main()
     
     printf("Answer is %d",ans);
     printf("\n");
+    return 0;
 }
 
 int power(int v,int p)
