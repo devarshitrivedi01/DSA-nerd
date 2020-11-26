@@ -1,0 +1,36 @@
+// Taylor Series using Horner's Rule
+
+#include <stdio.h>
+#include <stdlib.h>
+
+double Taylor(int,int);
+
+int main()
+{
+    int v,s;
+    printf("please enter value and steps - ");
+
+    printf(" Value: ");
+    scanf("%d",&v);
+
+    printf(" steps: ");
+    scanf("%d",&s);
+    printf("\n");
+
+    printf("Answer is %lf",Taylor(v,s));
+    printf("\n");
+}
+
+double Taylor(int v,int s)
+{
+    static double k;
+    if(s==0)
+    {
+      return k;
+    }
+    else
+    {
+        k=1+v*k/s;
+        return Taylor(v,s-1);
+    }
+}
