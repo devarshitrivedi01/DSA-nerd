@@ -1,0 +1,39 @@
+// Taylor Series using Static Variables
+
+#include <stdio.h>
+#include <stdlib.h>
+
+double Taylor(int,int);
+
+int main()
+{
+    int v,s;
+    printf("please enter value and steps - ");
+
+    printf(" Value: ");
+    scanf("%d",&v);
+
+    printf(" steps: ");
+    scanf("%d",&s);
+    printf("\n");
+
+    printf("Answer is %lf",Taylor(v,s));
+    printf("\n");
+}
+
+double Taylor(int v,int s)
+{
+    static double f=1,p=1;
+    double r;
+    if(s==0)
+    {
+      return 1;
+    }
+    else
+    {
+        r= Taylor(v,s-1);
+        p=p*v;
+        f=f*s;
+        return r+p/f;
+    }
+}
