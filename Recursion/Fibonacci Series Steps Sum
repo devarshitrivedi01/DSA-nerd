@@ -1,0 +1,32 @@
+// Fibonacci Series steps sum
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int Fib (int);
+
+int main()
+{
+    int s;
+    printf("please enter steps - ");
+
+    printf(" steps: ");
+    scanf("%d",&s);
+    printf("\n");
+
+    printf("Answer is %d",Fib(s));
+    printf("\n");
+}
+
+int Fib(int s)
+{
+    if(s<=1)
+    {
+      return s;
+    }
+    else
+    {
+
+        return Fib(s-2)+Fib(s-1);
+    }
+}
