@@ -1,4 +1,4 @@
-//Sum of Numbers Recursion
+//Sum of Numbers using Recursion
 
 #include <stdio.h>
 #include <stdlib.h>
