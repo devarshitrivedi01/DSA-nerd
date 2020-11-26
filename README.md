@@ -13,6 +13,6 @@ etc...
 
 There are also sorting and searching techniques in Data Structure. We also need to analyze the time and space use by perticular Data Structure. So, we can procced in efficient way.
 
-## code on Fundamental Concepts
+## Code on Fundamental Concepts
 ### 1. Recursion
   * [Tail-Head Recursion](https://github.com/devarshitrivedi01/Data-Structure-and-Algorithms/blob/main/Recursion/Tail-Head%20Recursion)
