@@ -4,6 +4,8 @@
 
 int A=0; //Global Variable
 
+int add_global(int);
+
 int main()
 {
     int n;
@@ -11,14 +13,15 @@ int main()
     scanf("%d",&n);
 
     printf("\n");
-    printf("%d",add_global(n));
+    printf("You get %d",add_global(n));
+    printf("\n");
 }
 
 int add_global(int n)
 {
     if(n>0)
     {
-        A++;                              //At time of last incriment of A value will be same for whole code. Ex. If you take 5 at time of last recursion A=5 , then it goes to 4,3,2,... but the value of A will be 5
+        A++;                              //At time of last increment of A value will be same for whole code. Ex. If you take 5 at time of last recursion A=5 , then it goes to 4,3,2,... but the value of A will be 5
         return add_global(n-1)+A;
     }
     return 0;
