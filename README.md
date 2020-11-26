@@ -1,2 +1,2 @@
 # Data-Structure-and-Algorithms
-This is the repository for Udemy course Mastering Data Structure and Algorithms using C and C++
+Data Structure is a way to Organize Data in computer's main memory, So that can be used efficiently. This is one of the Fundamental Concept's of Computer Science.
