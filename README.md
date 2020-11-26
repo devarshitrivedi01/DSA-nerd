@@ -33,3 +33,14 @@ I am currently doing work on it. So, in some days I will complete this repositor
   * [Use Global Variable in Recursion](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Recursion/Use%20Global%20Variable%20in%20Recursion)
   * [Use Static Variable in Recursion](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Recursion/Use%20Static%20Variable%20in%20Recursion)
   * [Sum of Numbers](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Recursion/Sum%20of%20Numbers)
+  * [Factorial using Recursion](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Recursion/Factorial%20Using%20Recursion)
+  * [Fibonacci Series steps sum](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Recursion/Fibonacci%20Series%20Steps%20Sum)
+  * [Power using Recursion 1](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Recursion/Power%20using%20Recursion%201)
+  * [Power using Recursion 2](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Recursion/Power%20using%20Recursion%202)
+  * [Taylor Series using Static Variables](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Recursion/Tailor%20Series%20using%20Static%20Variable)
+  * [Taylor Series using Horner's Rule](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Recursion/Taylor%20Series%20using%20Horner's%20Rule)
+  * [nCr using Recursion](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Recursion/nCr%20using%20Recursion)
+  * [Tower of Hanoi](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Recursion/Tower%20of%20Hanoi)
+  
+  ## Data Structures
+  ### 2. Arrays Represantations
