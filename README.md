@@ -43,4 +43,4 @@ I am currently doing work on it. So, in some days I will complete this repositor
   * [Tower of Hanoi](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Recursion/Tower%20of%20Hanoi)
   
   ## Data Structures
-  ### 2. Arrays Represantations
+  ### 1. Arrays Represantations
