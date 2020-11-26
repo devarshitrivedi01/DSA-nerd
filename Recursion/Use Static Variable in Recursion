@@ -13,6 +13,7 @@ int main()
     printf("\n");
     printf("You get %d",add_static(n));
     printf("\n");
+    return 0;
 }
 
 int add_static(int n)
