@@ -19,7 +19,7 @@ Thanks for Visiting!
 
 I am currently doing work on it. So, in some days I will complete this repository.
 
-## Fundamental Concepts
+## :book: Fundamental Concepts
 ### 1. Recursion
   
   :blue_book: Types of Recursion
@@ -42,5 +42,5 @@ I am currently doing work on it. So, in some days I will complete this repositor
   * [nCr using Recursion](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Recursion/nCr%20using%20Recursion)
   * [Tower of Hanoi](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Recursion/Tower%20of%20Hanoi)
   
-  ## Data Structures
+  ## :book: Data Structures
   ### 1. Arrays Represantations
