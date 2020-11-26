@@ -1,0 +1,42 @@
+//Tail-Head Recursion
+
+#include <stdio.h>
+void Tail(int);
+void Head(int);
+
+int main()
+{
+  int x;
+  
+  printf("Enter X value: "); //Give a value you want to insert
+  scanf("%d",&x);
+  printf("\n");
+  
+  printf("Tail Recursion: "); //Printing Tail Recursion
+  Tail(x);
+  printf("\n");
+  
+  printf("Head Recursion: "); //Printing Head Recursion
+  Head(x);
+  printf("\n");
+
+  return 0;
+}
+
+void Tail(int n) //Tail Recursion Ex. n n-1 n-2 ... 1
+{
+   if(n>0)
+   {
+    printf("%d ",n);
+    Tail(n-1);
+   }
+}
+
+void Head(int n) //Head Recursion Ex. 1 2 3 4 ... n
+{
+  if(n>0)
+  {
+    Head(n-1);
+    printf("%d ",n);
+  }
+}
