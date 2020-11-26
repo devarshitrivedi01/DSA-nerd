@@ -1,4 +1,5 @@
 //Sum of Numbers Recursion
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -11,13 +12,17 @@ int main()
     scanf("%d",&n);
 
     printf("\n");
-    printf("You get %d",add(n));
+    printf("Sum is %d",add(n));
     printf("\n");
 }
 
 int add(int n)
 {
-    if(n>0)
+    if(n==0)
+    {
+      return 0;
+    }
+    else
     {
       return add(n-1)+n;
     }
