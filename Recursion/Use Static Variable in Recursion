@@ -1,0 +1,27 @@
+//Static variable adding Recursion
+#include <stdio.h>
+#include <stdlib.h>
+
+int add_static(int);
+
+int main()
+{
+    int n;
+    printf("please enter value of n: ");
+    scanf("%d",&n);
+
+    printf("\n");
+    printf("You get %d",add_static(n));
+    printf("\n");
+}
+
+int add_static(int n)
+{
+    static int A=0; //Static Variable
+    if(n>0)
+    {
+        A++;                              //At time of last increment of A value will be same for whole code. Ex. If you take 5 at time of last recursion A=5 , then it goes to 4,3,2,... but the value of A will be 5
+        return add_static(n-1)+A;
+    }
+    return 0;
+}
