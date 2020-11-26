@@ -19,6 +19,7 @@ int main()
 
     printf("Answer is %lf",Taylor(v,s));
     printf("\n");
+    return 0;
 }
 
 double Taylor(int v,int s)
