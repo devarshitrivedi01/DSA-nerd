@@ -9,6 +9,7 @@ Data Structures are
 5. Trees
 6. Graphs
 7. Hashing
+etc...
 
 There are also sorting and searching techniques in Data Structure. We also need to analyze the time and space use by perticular Data Structure. So, we can procced in efficient way.
 
