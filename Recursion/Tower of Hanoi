@@ -1,0 +1,28 @@
+/ Tower of Hanoi
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void TOH(int,int,int,int);
+
+int main()
+{
+    int n;
+    printf("please enter disks number n: ");
+    scanf("%d",&n);
+    printf("\n");
+
+    TOH(n,1,2,3);
+    printf("\n");
+    return 0;
+}
+
+void TOH(int n,int A,int B,int C)
+{
+    if(n>0)
+    {
+     TOH(n-1,A,C,B);
+     printf("\n Disk %d move from tower %d to tower %d",n,A,C);
+     TOH(n-1,B,A,C);
+    }
+}
