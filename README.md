@@ -21,7 +21,8 @@ I am currently doing work on it. So, in some days I will complete this repositor
 
 ## Fundamental Concepts
 ### 1. Recursion
-  * [Tail-Head Recursion](https://github.com/devarshitrivedi01/Data-Structure-and-Algorithms/blob/main/Recursion/Tail-Head%20Recursion)
+  * [Tail Recursion](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Recursion/Tail%20Recursion)
+  * [Head Recursion](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Recursion/Head%20Recursion)
   * [Use Global Variable in Recursion](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Recursion/Use%20Global%20Variable%20in%20Recursion)
   * [Use Static Variable in Recursion](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Recursion/Use%20Static%20Variable%20in%20Recursion)
   * [Sum of Numbers](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Recursion/Sum%20of%20Numbers)
