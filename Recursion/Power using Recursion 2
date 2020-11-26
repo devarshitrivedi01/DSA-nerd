@@ -1,0 +1,40 @@
+// Power using Recursion 2
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int power(int,int);
+
+int main()
+{
+    int v,p,ans;
+    printf("please enter value and power- ");
+
+    printf(" Value: ");
+    scanf("%d",&v);
+
+    printf(" Power: ");
+    scanf("%d",&p);
+    printf("\n");
+
+    ans=power(v,p);
+
+    printf("Answer is %d",ans);
+    printf("\n");
+}
+
+int power(int v,int p)
+{
+    if(p==0)
+    {
+      return 1;
+    }
+    else if(p%2==0)
+    {
+        return power(v*v,p/2);
+    }
+    else
+    {
+      return v*power(v*v,(p-1)/2);
+    }
+}
