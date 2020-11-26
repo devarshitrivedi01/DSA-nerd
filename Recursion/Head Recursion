@@ -1,4 +1,5 @@
 //Head Recursion
+//Function has no operations before call itself.
 
 #include <stdio.h>
 void Head(int);
