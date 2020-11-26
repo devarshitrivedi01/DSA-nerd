@@ -1,0 +1,25 @@
+//Global variable adding Recursion
+#include <stdio.h>
+#include <stdlib.h>
+
+int A=0; //Global Variable
+
+int main()
+{
+    int n;
+    printf("please enter value of n: ");
+    scanf("%d",&n);
+
+    printf("\n");
+    printf("%d",add_global(n));
+}
+
+int add_global(int n)
+{
+    if(n>0)
+    {
+        A++;                              //At time of last incriment of A value will be same for whole code. Ex. If you take 5 at time of last recursion A=5 , then it goes to 4,3,2,... but the value of A will be 5
+        return add_global(n-1)+A;
+    }
+    return 0;
+}
