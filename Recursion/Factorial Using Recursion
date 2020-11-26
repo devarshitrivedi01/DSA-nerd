@@ -14,6 +14,7 @@ int main()
     printf("\n");
     printf("%d! is %d",n,fact(n));
     printf("\n");
+    return 0;
 }
 
 int fact(int n)
