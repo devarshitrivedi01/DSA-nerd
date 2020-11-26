@@ -1,0 +1,30 @@
+// Factorial using Recursion
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int fact(int);
+
+int main()
+{
+    int n;
+    printf("please enter value of n: ");
+    scanf("%d",&n);
+
+    printf("\n");
+    printf("%d! is %d",n,fact(n));
+    printf("\n");
+}
+
+int fact(int n)
+{
+    if(n==0)
+    {
+      return 1;
+    }
+    else
+    {
+      return fact(n-1)*n;      //Recursive call
+    }
+    return 0;
+}
