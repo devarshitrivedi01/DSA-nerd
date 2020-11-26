@@ -1,0 +1,28 @@
+//Recursion into Recursion called Nested Recursion.
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int fun(int);
+
+int main()
+{
+    int n,z;
+    printf("Enter any value of n");
+    scanf("%d",&n);
+    z=fun(n);                    //fun calling
+    printf("\n Result are %d",z);
+    return 0;
+}
+
+int fun(int n)
+{
+    if(n>100)
+    {
+        return n-10;
+    }
+    else
+    {
+        return fun(fun(n+11));  //passing Recursive Parameter
+    }
+}
