@@ -17,6 +17,7 @@ int main()
 
     printf("Answer is %d",C(n,r));
     printf("\n");
+    return 0;
 }
 
 int C(int n,int r)
