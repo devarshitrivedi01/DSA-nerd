@@ -1,0 +1,34 @@
+//when multiple function calling each other repetitively it is formed Indirect Recursion.
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void fun1(int);
+void fun2(int);
+
+int main()
+{
+    int n;
+    printf("Enter any value of n");
+    scanf("%d",&n);
+    fun1(n);           //fun1 calling
+    return 0;
+}
+
+void fun1(int n)
+{
+    if(n>0)
+    {
+        printf("%d ",n);
+        fun2(n-1);      //fun1 calling fun2
+    }
+}
+
+void fun2(int k)
+{
+    if(k>1)
+    {
+        printf("%d ",k);
+        fun1(k/2);     //fun2 calling fun1
+    }
+}
