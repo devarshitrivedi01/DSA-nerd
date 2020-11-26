@@ -1,0 +1,33 @@
+// nCr using Recursion
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int C(int,int);
+
+int main()
+{
+    int n,r;
+    printf("please enter n: ");
+    scanf("%d",&n);
+    printf("\n");
+
+    printf("please enter r: ");
+    scanf("%d",&r);
+
+    printf("Answer is %d",C(n,r));
+    printf("\n");
+}
+
+int C(int n,int r)
+{
+    if(r==0||n==r)
+    {
+      return 1;
+    }
+    else
+    {
+
+        return C(n-1,r-1)+C(n-1,r);
+    }
+}
