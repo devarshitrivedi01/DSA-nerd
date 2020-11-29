@@ -43,4 +43,7 @@ I am currently doing work on it. So, in some days I will complete this repositor
   * [Tower of Hanoi](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Recursion/Tower%20of%20Hanoi)
   
   ## :book: Data Structures
-  ### 1. Arrays Represantations
+  ### 1. Arrays ADT
+  * [Array Master](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Array%20ADT/Array%20Master)
+  
+  :blue_book: What it is Include?
