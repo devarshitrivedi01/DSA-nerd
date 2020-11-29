@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void display(int *);
+void display(int*);
 void insert(int*,int,int);
 void add(int*,int);
 int delete(int*,int);
