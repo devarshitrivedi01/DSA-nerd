@@ -49,21 +49,21 @@ I am currently doing work on it. So, in some days I will complete this repositor
   :blue_book: What it is Include?
   
   First of all Array is created by pointer in Dynamic Memory and it is include Functions like 
-  *Display Array
-  *Insert an Element at Any Index
-  *Add Element at Last
-  *Delete an Element at Any Index
-  *Linear Search
-  *Binary Search
-  *Display an Element of Any Index
-  *Change an Element of Any Index
-  *Maximum Element of Array
-  *Minimum Element of Array
-  *Sum of Element of Array
-  *Average of Array
-  *Reverse an Array
-  *Swap two Element of Any Index
-  *Insert an Element in Soarted Array (Index automatically organized)
-  *Check Array is Soarted or Not
-  *Make Negative and Positive Element Wall in Array
-  *Sort an Array
+  * Display Array
+  * Insert an Element at Any Index
+  * Add Element at Last
+  * Delete an Element at Any Index
+  * Linear Search
+  * Binary Search
+  * Display an Element of Any Index
+  * Change an Element of Any Index
+  * Maximum Element of Array
+  * Minimum Element of Array
+  * Sum of Element of Array
+  * Average of Array
+  * Reverse an Array
+  * Swap two Element of Any Index
+  * Insert an Element in Soarted Array (Index automatically organized)
+  * Check Array is Soarted or Not
+  * Make Negative and Positive Element Wall in Array
+  * Sort an Array
