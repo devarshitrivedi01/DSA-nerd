@@ -1,0 +1,428 @@
+//Array Abstract Data Type
+//Representation of Data and Set of Operations called Abstract Data Type
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void display(int *);
+void insert(int*,int,int);
+void add(int*,int);
+int delete(int*,int);
+int linear(int*,int);
+int binary(int*,int,int,int);
+int get(int*,int);
+void set(int*,int,int);
+int max(int*);
+int min(int*);
+int sum(int*,int);
+float avg(int*);
+void reverse(int*);
+void swap(int*,int,int);
+void sortinsert(int*,int);
+int sortchecking(int *);
+void npside(int*);
+void sort(int*);
+
+int length;
+int size;
+
+int main()
+{
+    int *arr;
+    int i,x,index;
+    int c=0;
+    int ans;
+    printf("\n Enter the size of the array");
+    scanf("%d",&size);
+    arr=(int*)malloc((size)*sizeof(int));
+    b:
+    printf("\n Enter the length of the array");
+    scanf("%d",&length);
+    if(length>0 && length<=size)
+    {
+       for(i=0;i<length;i++)
+       {
+           printf("element %d: ",i+1);
+           scanf("%d",&arr[i]);
+       }
+       while(c!=100)
+       {
+           printf("\n Do You Want Menu? 1 for yes");
+           scanf("%d",&ans);
+           if(ans==1)
+           {
+              printf("\n");
+              printf("\n 1.Display");
+              printf("\n 2.Insert");
+              printf("\n 3.Add");
+              printf("\n 4.Delete");
+              printf("\n 5.Linear Search");
+              printf("\n 6.Binary Search");
+              printf("\n 7.Get");
+              printf("\n 8.Set");
+              printf("\n 9.Max");
+              printf("\n 10.Min");
+              printf("\n 11.Sum");
+              printf("\n 12.Average");
+              printf("\n 13.Reversing Array");
+              printf("\n 14.Swap two index");
+              printf("\n 15.Making wall between Positive and Negative element");
+              printf("\n 16.Checking Array is Sorted or Not");
+              printf("\n 17.Sorted Array Insert *Warning* Only For Sorted Array");
+              printf("\n 18.Sort your Array Live your life!");
+              printf("\n 19.Exit");
+              printf("\n");
+           }
+
+           printf("\n Enter your choice according to list: ");
+           scanf("%d",&c);
+           switch(c)
+           {
+               case 1:
+                   display(arr);
+                   break;
+
+               case 2:
+                   printf("\n What element you want to insert at what index?");
+                   printf("\n element ");
+                   scanf("%d",&x);
+                   printf("\n index ");
+                   scanf("%d",&index);
+                   insert(arr,x,index);
+                   display(arr);
+                   break;
+
+               case 3:
+                   printf("\n What element you want to insert?");
+                   printf("\n element ");
+                   scanf("%d",&x);
+                   add(arr,x);
+                   display(arr);
+                   break;
+
+               case 4:
+                   printf("\n which index element you want to delete at what index?");
+                   printf("\n index ");
+                   scanf("%d",&index);
+                   printf("\n Deleted element is %d ",delete(arr,index));
+                   display(arr);
+                   break;
+
+               case 5:
+                   printf("\n which element you want to search?");
+                   scanf("%d",&x);
+                   printf(" search element index is %d ",linear(arr,x));
+                   break;
+
+               case 6:
+                   printf("\n which element you want to search?");
+                   scanf("%d",&x);
+                   printf(" search element index is %d ",binary(arr,0,length,x));
+                   break;
+
+               case 7:
+                  printf("\n Which index element you want to display?");
+                  scanf("%d",&index);
+                  printf("\n element is %d",get(arr,index));
+                  break;
+
+              case 8:
+                  printf("\n What element you want to set at what index?");
+                  printf("\n element ");
+                  scanf("%d",&x);
+                  printf("\n index ");
+                  scanf("%d",&index);
+                  set(arr,x,index);
+                  display(arr);
+                  break;
+
+              case 9:
+                  printf("\n Maximum element is %d",max(arr));
+                  break;
+
+              case 10:
+                  printf("\n Minimum element is %d",min(arr));
+                  break;
+
+              case 11:
+                  printf("\n Sum of element is %d",sum(arr,length));
+                  break;
+
+              case 12:
+                  printf("\n Average of element is %f",avg(arr));
+                  break;
+
+              case 13:
+                  reverse(arr);
+                  printf("\n Array is Reversed");
+                  display(arr);
+                  break;
+
+              case 14:
+                  printf("\n Enter two index for swapping");
+                  printf("\n index 1");
+                  scanf("%d",index);
+                  printf("\n index 2");
+                  scanf("%d",x);
+                  swap(arr,index,x);
+                  break;
+
+              case 15:
+                  printf("\n Let's Create a wall");
+                  npside(arr);
+                  printf("\n Wall Created See Yourself;) ");
+                  display(arr);
+                  break;
+
+              case 16:
+                  printf("\n %d",sortchecking(arr));
+                  printf("\n 1 for True and -1 for False");
+                  break;
+
+              case 17:
+                  printf("\n What element you want to insert?");
+                  printf("\n element ");
+                  scanf("%d",&x);
+                  sortinsert(arr,x);
+                  display(arr);
+                  break;
+
+              case 18:
+                  sort(arr);
+                  break;
+
+              case 19:
+                  exit(0);
+
+              default:
+                  printf("\n Ooooops! wrong choice...Don't Worry! Try Again :)");
+           }
+       }
+    }
+    else
+    {
+        goto b;
+    }
+    free(arr);
+}
+
+void display(int *arr)
+{
+    int i;
+    for(i=0;i<length;i++)
+    {
+        printf("%d ",arr[i]);
+    }
+}
+
+void insert(int *arr,int x,int index)
+{
+    int i;
+    if(index<=length)
+    {
+        for(i=length;i>index;i--)
+        {
+            arr[i]=arr[i-1];
+        }
+        arr[index]=x;
+        length++;
+    }
+}
+
+void add(int *arr,int x)
+{
+    arr[length]=x;
+    length++;
+}
+
+int delete(int *arr,int index)
+{
+    int i,temp;
+    if(index<=length)
+    {
+        temp=arr[index];
+        for(i=index;i<length-1;i++)
+        {
+            arr[i]=arr[i+1];
+        }
+        length--;
+    }
+    return temp;
+}
+
+int linear(int *arr,int x)
+{
+    int i;
+    for(i=0;i<length;i++)
+    {
+        if(x==arr[i])
+        {
+            return i;
+        }
+    }
+    return -1;
+}
+
+int binary(int *arr,int l,int h,int x)
+{
+    int m;
+    m=(l+h)/2;
+    if(x<arr[m])
+    {
+        h=m-1;
+        return binary(arr,l,h,x);
+    }
+    else if(x>arr[m])
+    {
+        l=m+1;
+        return binary(arr,l,h,x);
+    }
+    else if(x==arr[m])
+    {
+        return m;
+    }
+    else
+    {
+        return -1;
+    }
+}
+
+int get(int *arr,int index)
+{
+    if(index>=0 && index<=length)
+    {
+        return arr[index];
+    }
+    return -1;
+}
+
+void set(int *arr,int index,int x)
+{
+    if(index>=0 && index<length)
+    {
+         arr[index]=x;
+    }
+}
+
+int max(int *arr)
+{
+    int max,i;
+    max=arr[0];
+    for(i=0;i<length;i++)
+    {
+        if(arr[i]>max)
+        {
+            max=arr[i];
+        }
+    }
+    return max;
+}
+
+int min(int *arr)
+{
+    int min,i;
+    min=arr[0];
+    for(i=0;i<length;i++)
+    {
+        if(arr[i]<min)
+        {
+            min=arr[i];
+        }
+    }
+    return min;
+}
+
+int sum(int *arr,int x)
+{
+    if(x>=0)
+    {
+       return sum(arr,x-1)+arr[x];
+    }
+    return 0;
+}
+
+float avg(int *arr)
+{
+    return sum(arr,length-1)/length;
+}
+
+void reverse(int *arr)
+{
+    int i,j,temp;
+    for(i=0,j=length-1;i<j;i++,j--)
+    {
+       temp=arr[i];
+       arr[i]=arr[j];
+       arr[j]=temp;
+    }
+}
+
+void swap(int *arr,int i,int j)
+{
+    int temp;
+    temp=arr[j];
+    arr[j]=arr[i];
+    arr[i]=temp;
+}
+
+int sortchecking(int *arr)
+{
+    int i;
+    for(i=0;i<length;i++)
+    {
+        if(arr[i]>arr[i+1])
+        {
+            return -1;
+        }
+    }
+    return 1;
+}
+//Only use if Array is sorted
+void sortinsert(int *arr,int x)
+{
+    int i;
+    for(i=length;i>=0;i--)
+    {
+        if(arr[i-1]>x)
+        {
+            arr[i]=arr[i-1];
+        }
+        else if(arr[i-1]<=x)
+        {
+            arr[i]=x;
+            break;
+        }
+    }
+    length++;
+}
+
+void npside(int *arr)
+{
+    int i,j;
+    i=0,j=length-1;
+    while(i<j)
+    {
+        while(arr[i]<0){i++;}
+        while(arr[j]>=0){j--;}
+        if(i<j)
+        {
+            swap(arr,i,j);
+        }
+    }
+}
+
+void sort(int *arr)
+{
+    int i,j;
+    for(i=0;i<length-1;i++)
+    {
+        for(j=i+1;j<length;j++)
+        {
+            if(arr[i]>=arr[j])
+            {
+                swap(arr,i,j);
+            }
+        }
+    }
+}
+
