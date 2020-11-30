@@ -67,3 +67,15 @@ I am currently doing work on it. So, in some days I will complete this repositor
   * Check Array is Soarted or Not
   * Make Negative and Positive Element Wall in Array
   * Sort an Array
+  
+  * [Double Array Master](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Array%20ADT/Double%20Array%20Master)
+  
+  :blue_book: What it is Include?
+  
+  First of all Array is created by pointer in Dynamic Memory and it is include Double Array Functions like 
+  * Display Array
+  * Sorting any Array
+  * Merging Two Array
+  * Intersection of Two Array
+  * Union of Two Array
+  * Difference of Two Array
