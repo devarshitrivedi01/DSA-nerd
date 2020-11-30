@@ -2,7 +2,6 @@
 #include <stdlib.h>
 
 void display(int*,int);
-void sort(int*,int);
 void uni(int*,int*,int*,int,int);
 void sort(int*,int);
 void merge(int*,int*,int*,int,int);
