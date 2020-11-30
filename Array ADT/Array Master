@@ -192,6 +192,7 @@ int main()
                   break;
 
               case 19:
+                  free(arr);
                   exit(0);
 
               default:
@@ -203,7 +204,7 @@ int main()
     {
         goto b;
     }
-    free(arr);
+   return 0; 
 }
 
 void display(int *arr)
