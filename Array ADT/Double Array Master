@@ -1,0 +1,280 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void display(int*,int);
+void sort(int*,int);
+void uni(int*,int*,int*,int,int);
+void sort(int*,int);
+void merge(int*,int*,int*,int,int);
+void intersection(int*,int*,int*,int,int);
+void dif(int*,int*,int*,int,int);
+
+int main()
+{
+    int *arr1;
+    int *arr2;
+    int *arr3;
+    int i,j,k=0;
+    int ans,c;
+    int l1,l2,s1,s2;
+    printf("\n Enter the size of the array 1:");
+    scanf("%d",&s1);
+    arr1=(int*)malloc((s1)*sizeof(int));
+    b:
+    printf("\n Enter the length of the array 1:");
+    scanf("%d",&l1);
+    if(l1>0 && l1<=s1)
+    {
+       for(i=0;i<l1;i++)
+       {
+           printf("element %d: ",i+1);
+           scanf("%d",&arr1[i]);
+       }
+    }
+    else
+    {
+        goto b;
+    }
+    printf("\n Enter the size of the array 2:");
+    scanf("%d",&s2);
+    arr2=(int*)malloc((s2)*sizeof(int));
+    c:
+    printf("\n Enter the length of the array 1:");
+    scanf("%d",&l2);
+    if(l2>0 && l2<=s2)
+    {
+       for(i=0;i<l2;i++)
+       {
+           printf("element %d: ",i+1);
+           scanf("%d",&arr2[i]);
+       }
+    }
+    else
+    {
+        goto c;
+    }
+    arr3=(int*)malloc((s1+s2)*sizeof(int));
+    i=0;
+    j=0;
+    while(1)
+    {
+       printf("\n Do You Want Menu? 1 for yes");
+       scanf("%d",&ans);
+       if(ans==1)
+           {
+              printf("\n");
+              printf("\n 1.Display");
+              printf("\n 2.Merge");
+              printf("\n 3.Union");
+              printf("\n 4.Intersection");
+              printf("\n 5.Difference");
+              printf("\n 6.Exit");
+           }
+           printf("\n Enter your choice according to list: ");
+           scanf("%d",&c);
+           switch(c)
+           {
+               case 1:
+                   printf("\n");
+                   display(arr1,l1);
+                   printf("\n");
+                   display(arr2,l2);
+                   break;
+
+               case 2:
+                   merge(arr1,arr2,arr3,l1,l2);
+                   break;
+
+               case 3:
+                    sort(arr1,l1);
+                    display(arr1,l1);
+                    printf("\n");
+                    sort(arr2,l2);
+                    display(arr2,l2);
+                    printf("\n");
+                    uni(arr1,arr2,arr3,l1,l2);
+                    break;
+
+              case 4:
+                    intersection(arr1,arr2,arr3,l1,l2);
+                    break;
+
+              case 5:
+                    sort(arr1,l1);
+                    sort(arr2,l2);
+                    dif(arr1,arr2,arr3,l1,l2);
+                    break;
+
+              case 6:
+                  free(arr1);
+                  free(arr2);
+                  free(arr3);
+                  exit(0);
+
+              default:
+                  printf("\n Ooooops! wrong choice...Don't Worry! Try Again :)");
+           }
+       }
+     return 0;
+}
+
+void display(int *arr,int length)
+{
+    int i;
+    for(i=0;i<length;i++)
+    {
+        printf("%d ",arr[i]);
+    }
+}
+
+void uni(int*arr1,int*arr2,int*arr3,int l1,int l2)
+{
+    int i=0;
+    int j=0;
+    int k=0;
+    while(i<l1 && j<l2)
+       {
+           if(arr1[i]<arr2[j])
+           {
+               arr3[k]=arr1[i];
+               k++;
+               i++;
+           }
+           else if(arr1[i]>arr2[j])
+           {
+               arr3[k]=arr2[j];
+               k++;
+               j++;
+           }
+           else if(arr1[i]==arr2[j])
+           {
+               arr3[k]=arr1[i];
+               i++;
+               j++;
+               k++;
+           }
+       }
+       for(;i<l1;i++)
+       {
+           arr3[k]=arr1[i];
+           k++;
+       }
+       for(;j<l2;j++)
+       {
+           arr3[k]=arr2[j];
+           k++;
+       }
+       display(arr3,k);
+}
+
+void sort(int *arr,int length)
+{
+    int i,j,temp;
+    for(i=0;i<length-1;i++)
+    {
+        for(j=i+1;j<length;j++)
+        {
+            if(arr[i]>=arr[j])
+            {
+                temp=arr[j];
+                arr[j]=arr[i];
+                arr[i]=temp;
+            }
+        }
+    }
+}
+
+void merge(int *arr1,int *arr2,int *arr3,int l1,int l2)
+{
+    int i=0;
+    int j=0;
+    int k=0;
+    while(i<l1 && j<l2)
+       {
+           if(arr1[i]<arr2[j])
+           {
+               arr3[k]=arr1[i];
+               k++;
+               i++;
+           }
+           else if(arr1[i]>=arr2[j])
+           {
+               arr3[k]=arr2[j];
+               k++;
+               j++;
+           }
+       }
+       for(;i<l1;i++)
+       {
+           arr3[k]=arr1[i];
+           k++;
+       }
+       for(;j<l2;j++)
+       {
+           arr3[k]=arr2[j];
+           k++;
+       }
+       display(arr3,k);
+}
+
+void intersection(int *arr1,int *arr2,int *arr3,int l1,int l2)
+{
+    int i=0;
+    int j=0;
+    int k=0;
+    while(i<l1 && j<l2)
+       {
+           if(arr1[i]<arr2[j])
+           {
+               i++;
+           }
+           else if(arr1[i]>arr2[j])
+           {
+               j++;
+           }
+           else if(arr1[i]==arr2[j])
+           {
+               arr3[k]=arr1[i];
+               i++;
+               j++;
+               k++;
+           }
+       }
+       display(arr3,k);
+}
+
+void dif(int *arr1,int *arr2,int *arr3,int l1,int l2)
+{
+    int i=0;
+    int j=0;
+    int k=0;
+    while(i<l1 && j<l2)
+       {
+           if(arr1[i]<arr2[j])
+           {
+               arr3[k]=arr1[i];
+               k++;
+               i++;
+           }
+           else if(arr1[i]>arr2[j])
+           {
+               j++;
+           }
+           else if(arr1[i]==arr2[j])
+           {
+               i++;
+               j++;
+           }
+       }
+       for(;i<l1;i++)
+       {
+           arr3[k]=arr1[i];
+           k++;
+       }
+       for(;j<l2;j++)
+       {
+           arr3[k]=arr2[j];
+           k++;
+       }
+       display(arr3,k);
+}
