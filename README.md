@@ -85,16 +85,16 @@ I am currently doing work on it. So, in some days I will complete this repositor
   
   * Code String Master is Include Single String Functions like
    * Display String
-    * Find Length of String
-    * Chnage Case of String
-    * Count Words of The String
-    * Check String is Valid or Not
-    * Reverse The String
-    * Finding Duplicates in String
-    * String Permutations
+   * Find Length of String
+   * Chnage Case of String
+   * Count Words of The String
+   * Check String is Valid or Not
+   * Reverse The String
+   * Finding Duplicates in String
+   * String Permutations
   
   * Code String Master is Include Double String Functions like
    * Compairing Strings
-    * Palindrome String Checking
-    * Anagram String
+   * Palindrome String Checking
+   * Anagram String
     
