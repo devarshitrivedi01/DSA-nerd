@@ -98,3 +98,5 @@ I am currently doing work on it. So, in some days I will complete this repositor
     * Palindrome String Checking
     * Anagram String
     
+  ### 3. Sparse Matrix and Polynomial Represantation
+      Sparse Matrix is Matrix which have many zero elements.  
