@@ -67,5 +67,6 @@ int main()
   struct sparse s;
   create(&s);
   display(s);
+  free(s.e);
   return 0;
 }
