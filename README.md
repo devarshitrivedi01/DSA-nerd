@@ -78,23 +78,23 @@ I am currently doing work on it. So, in some days I will complete this repositor
     * Union of Two Array
     * Difference of Two Array
     
-### 2. Strings
-* [String Master](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Strings/String%20Master)
+  ### 2. Strings
+  * [String Master](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Strings/String%20Master)
   
   :blue_book: What it is Include?
   
   * Code String Master is Include Single String Functions like
-   * Display String
-   * Find Length of String
-   * Chnage Case of String
-   * Count Words of The String
-   * Check String is Valid or Not
-   * Reverse The String
-   * Finding Duplicates in String
-   * String Permutations
+    * Display String
+    * Find Length of String
+    * Chnage Case of String
+    * Count Words of The String
+    * Check String is Valid or Not
+    * Reverse The String
+    * Finding Duplicates in String
+    * String Permutations
   
   * Code String Master is Include Double String Functions like
-   * Compairing Strings
-   * Palindrome String Checking
-   * Anagram String
+    * Compairing Strings
+    * Palindrome String Checking
+    * Anagram String
     
