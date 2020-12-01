@@ -105,3 +105,4 @@ I am currently doing work on it. So, in some days I will complete this repositor
   * [Create and Display Sparse Matrix](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Sparse%20Matrix%20and%20Polynomial%20Represantation/Create%20and%20Display%20Sparse%20Matrix)
   * [Add Two Spares Matrix](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Sparse%20Matrix%20and%20Polynomial%20Represantation/Add%20Two%20Spares%20Matrix)
   * [Create Polynomial Equation](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Sparse%20Matrix%20and%20Polynomial%20Represantation/Create%20Polynomial%20Equation)
+  * [Add Two Polynomial Equations](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Sparse%20Matrix%20and%20Polynomial%20Represantation/Add%20Two%20Polynomial%20Equations)
