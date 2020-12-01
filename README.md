@@ -101,4 +101,4 @@ I am currently doing work on it. So, in some days I will complete this repositor
   ### 3. Sparse Matrix and Polynomial Represantation
       Sparse Matrix is Matrix which have many zero elements. 
   
-  * [Create and Display Sparse Matrix](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Sparse%20Matrix%20and%20Polynomial%20Represantation/Sparse%20Matrix%20Create)
+  * [Create and Display Sparse Matrix](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Sparse%20Matrix%20and%20Polynomial%20Represantation/Create%20and%20Display%20Sparse%20Matrix)
