@@ -78,9 +78,8 @@ I am currently doing work on it. So, in some days I will complete this repositor
     * Union of Two Array
     * Difference of Two Array
     
-    
-###2. Strings
-  * [String Master](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Strings/String%20Master)
+### 2. Strings
+* [String Master](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Strings/String%20Master)
   
   :blue_book: What it is Include?
   
