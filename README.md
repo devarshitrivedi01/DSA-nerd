@@ -84,7 +84,7 @@ I am currently doing work on it. So, in some days I will complete this repositor
   :blue_book: What it is Include?
   
   * Code String Master is Include Single String Functions like
-    * Display String
+   * Display String
     * Find Length of String
     * Chnage Case of String
     * Count Words of The String
@@ -94,7 +94,7 @@ I am currently doing work on it. So, in some days I will complete this repositor
     * String Permutations
   
   * Code String Master is Include Double String Functions like
-    * Compairing Strings
+   * Compairing Strings
     * Palindrome String Checking
     * Anagram String
     
