@@ -1,0 +1,95 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+struct element
+{
+    int coff;
+    int exp;
+};
+
+struct poly
+{
+    int n;
+    struct element *e;
+};
+
+void create(struct poly *p)
+{
+    int i;
+    printf("\n Enter number of elements: ");
+    scanf("%d",&p->n);
+    p->e=(struct element*)malloc((p->n)*sizeof(struct element));
+    for(i=0;i<p->n;i++)
+    {
+        printf("\n enter coff for %d element: ",i+1);
+        scanf("%d",&p->e[i].coff);
+        printf("enter exp for %d element: ",i+1);
+        scanf("%d",&p->e[i].exp);
+    }
+}
+
+void add(struct poly *s1,struct poly *s2)
+{
+    int i,j,k;
+    i=j=k=0;
+    struct poly s;
+    s.e=(struct element*)malloc(((s1->n)+(s2->n))*sizeof(struct element));
+    while(i<s1->n && j<s2->n)
+    {
+        if(s1->e[i].exp<s2->e[j].exp)
+        {
+            s.e[k++]=s1->e[i++];
+        }
+        else if(s2->e[j].exp<s1->e[i].exp)
+        {
+            s.e[k++]=s2->e[j++];
+        }
+        else
+        {
+            s.e[k]=s1->e[i];
+            s.e[k++].coff=s1->e[i++].coff+s2->e[j++].coff;
+        }
+    }
+    for(;i<s1->n;i++)
+    {
+        s.e[k++]=s1->e[i];
+    }
+    for(;j<s2->n;j++)
+    {
+        s.e[k++]=s2->e[j];
+    }
+    i=j=0;
+    s.n=k;
+    for(i=0;i<s.n;i++)
+    {
+       printf("%dX^%d+",s.e[i].coff,s.e[i].exp);
+    }
+    printf("0");
+    free(s.e);
+}
+
+void display(struct poly p)
+{
+    int i,j,k=0;
+    i=j=0;
+    for(i=0;i<p.n;i++)
+    {
+       printf("%dX^%d+",p.e[i].coff,p.e[i].exp);
+    }
+    printf("0");
+}
+
+
+int main()
+{
+  struct poly p1,p2;
+  create(&p1);
+  display(p1);
+  create(&p2);
+  display(p2);
+  printf("\n");
+  add(&p1,&p2);
+  return 0;
+}
+
