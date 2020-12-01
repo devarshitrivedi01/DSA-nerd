@@ -78,11 +78,11 @@ void add(struct sparse *s1,struct sparse *s2)
     }
     for(;i<s3.tot;i++)
     {
-        s3.e[k++]=s1->e[i++];
+        s3.e[k++]=s1->e[i];
     }
     for(;j<s3.tot;j++)
     {
-        s3.e[k++]=s2->e[j++];
+        s3.e[k++]=s2->e[j];
     }
     k=0;
     for(i=1;i<=s3.nr;i++)
