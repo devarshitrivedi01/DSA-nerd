@@ -122,7 +122,7 @@ I am currently doing work on it. So, in some days I will complete this repositor
   * [Complete LL Program](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Linked%20List/Complete%20LL%20Program)
   
  
-  :blue_book: * [Linked List Master](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Linked%20List/Linked%20List%20Master)
+  :blue_book:  [Linked List Master](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Linked%20List/Linked%20List%20Master)
   
   * Code Linked List Master is Include Functions like
     * Display Linked List
