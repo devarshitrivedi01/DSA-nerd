@@ -118,4 +118,5 @@ I am currently doing work on it. So, in some days I will complete this repositor
   * [Maximum Element](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Linked%20List/Maximum%20Element)
   * [Minimum Element](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Linked%20List/Minimum%20Element)
   * [Linear Search](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Linked%20List/Linear%20Search)
+  * [Move to First Improved Linear Search](https://github.com/devarshitrivedi01/DSA-nerd/edit/main/Linked%20List/Move%20to%20First%20Improved%20Search)
   * [Complete LL Program](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Linked%20List/Complete%20LL%20Program)
