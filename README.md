@@ -106,3 +106,13 @@ I am currently doing work on it. So, in some days I will complete this repositor
   * [Add Two Spares Matrix](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Sparse%20Matrix%20and%20Polynomial%20Represantation/Add%20Two%20Spares%20Matrix)
   * [Create Polynomial Equation](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Sparse%20Matrix%20and%20Polynomial%20Represantation/Create%20Polynomial%20Equation)
   * [Add Two Polynomial Equations](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Sparse%20Matrix%20and%20Polynomial%20Represantation/Add%20Two%20Polynomial%20Equations)
+  
+  ### 4. Linked List
+  * [Create and Display Linked List](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Linked%20List/Create%20and%20Display%20Linked%20List)
+  * [Display and Reverse Display Recursively](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Linked%20List/Display%20and%20Reverse%20Display%20Recursively)
+  * [Counting Nodes](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Linked%20List/Counting%20Nodes)
+  * [Sum of Elements](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Linked%20List/Sum%20of%20Elements)
+  * [Maximum Element](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Linked%20List/Maximum%20Element)
+  * [Minimum Element](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Linked%20List/Minimum%20Element)
+  * [Linear Search](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Linked%20List/Linear%20Search)
+  * [Complete LL Program](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Linked%20List/Complete%20LL%20Program)
