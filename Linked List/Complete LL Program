@@ -1,0 +1,139 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct node
+{
+    int data;
+    struct node *next;
+};
+
+struct node *first=NULL;
+
+void create(int A[],int n)
+{
+    int i;
+    struct node *t,*last;
+    first=(struct node*)malloc(sizeof(struct node));
+    first->data=A[0];
+    first->next=NULL;
+    last=first;
+    for(i=1;i<n;i++)
+    {
+        t=(struct node*)malloc(sizeof(struct node));
+        t->data=A[i];
+        t->next=NULL;
+        last->next=t;
+        last=t;
+    }
+}
+
+void display(struct node *p)
+{
+    while(p!=NULL)
+    {
+        printf("%d ",p->data);
+        p=p->next;
+    }
+}
+
+void RDisplay(struct node *p)
+{
+    if(p!=NULL)
+    {
+       RDisplay(p->next);
+       printf("%d ",p->data);
+    }
+}
+
+int count(struct node *p)
+{
+    if(p==0)
+    {
+        return 0;
+    }
+    else
+    {
+        return 1+count(p->next);
+    }
+}
+
+int sum(struct node*p)
+{
+    if(p==0)
+    {
+        return 0;
+    }
+    else
+    {
+        return p->data+sum(p->next);
+    }
+}
+
+int max(struct node *p)
+{
+    int max=0;
+    while(p!=0)
+    {
+        if(max<p->data)
+        {
+            max=p->data;
+        }
+        p=p->next;
+    }
+    return max;
+}
+
+int min(struct node *p)
+{
+    int min=0;
+    while(p!=0)
+    {
+        if(min>p->data)
+        {
+            min=p->data;
+        }
+        p=p->next;
+    }
+    return min;
+}
+
+struct node *search(struct node *p,int key)
+{
+    if(p==0)
+    {
+        return NULL;
+    }
+    else
+    {
+        if(key==p->data)
+        {
+           return p;
+        }
+        else
+        {
+           return search(p->next,key);
+        }
+    }
+}
+
+int main()
+{
+    int A[5]={0,1,2,3,4};
+
+    create(A,5);
+    display(first);
+    printf("\n");
+    RDisplay(first);
+    printf("\n");
+    printf("count is: %d",count(first));
+    printf("\n");
+    printf("Sum is: %d",sum(first));
+    printf("\n");
+    printf("max is: %d",max(first));
+    printf("\n");
+    printf("min is: %d",min(first));
+    printf("\n");
+    printf("address is: %d",search(first,4));
+
+    return 0;
+}
