@@ -1,0 +1,72 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct node
+{
+    int data;
+    struct node *next;
+};
+
+struct node *first=NULL;
+
+void create(int A[],int n)
+{
+    int i;
+    struct node *t,*last;
+    first=(struct node*)malloc(sizeof(struct node));
+    first->data=A[0];
+    first->next=NULL;
+    last=first;
+    for(i=1;i<n;i++)
+    {
+        t=(struct node*)malloc(sizeof(struct node));
+        t->data=A[i];
+        t->next=NULL;
+        last->next=t;
+        last=t;
+    }
+}
+
+void display(struct node *p)
+{
+    while(p!=NULL)
+    {
+        printf("%d ",p->data);
+        p=p->next;
+    }
+}
+
+
+struct node *mflsearch(struct node *p,int key)
+{
+    struct node*q=NULL;
+    while(p!=0)
+    {
+        if(key==p->data)
+        {
+            q->next=p->next;
+            p->next=first;
+            first=p;
+            return p;
+        }
+        else
+        {
+            q=p;
+            p=p->next;
+        }
+    }
+    return NULL;
+}
+
+int main()
+{
+    int A[5]={0,1,2,3,4};
+
+    create(A,5);
+    display(first);
+    printf("\n");
+    printf("address is: %d",mflsearch(first,4));
+    printf("\n");
+    display(first);
+    return 0;
+}
