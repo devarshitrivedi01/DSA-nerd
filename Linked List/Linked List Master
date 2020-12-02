@@ -1,0 +1,300 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct node
+{
+    int data;
+    struct node *next;
+};
+
+struct node *first=NULL;
+struct node *last=NULL;
+
+int count(struct node *p)
+{
+    if(p!=0)
+    {
+        return 1+count(p->next);
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+void insert(struct node *p,int pos,int data)
+{
+    int i;
+    struct node *t,*q;
+    if(count(p)==0 && pos>0)
+    {
+     printf("\n Please Enter first element in zero position once");
+    }
+    else if(count(p)==0 && pos==0)
+    {
+        t=(struct node*)malloc(sizeof(struct node));
+        t->data=data;
+        t->next=NULL;
+        first=last=t;
+    }
+    else
+    {
+        if(pos==0)          //insertion at first
+        {
+            t=(struct node*)malloc(sizeof(struct node));
+            t->data=data;
+            t->next=first;
+            first=t;
+        }
+        else if(pos>0 || pos<count(p))
+        {
+            t=(struct node*)malloc(sizeof(struct node));
+            t->data=data;
+            for(i=0;i<pos-1;i++)
+            {
+                p=p->next;
+            }
+            t->next=p->next;
+            p->next=t;
+        }
+     }
+}
+
+void sinsert(struct node *p,int data)
+{
+    struct node *t,*q=NULL;
+    if(count(p)==0)
+    {
+     t=(struct node*)malloc(sizeof(struct node));
+        t->data=data;
+        t->next=NULL;
+        first=last=t;
+    }
+    else
+    {
+        q=p;
+        t=(struct node*)malloc(sizeof(struct node));
+        t->data=data;
+        t->next=NULL;
+        while(p && t->data>p->data)
+        {
+            q=p;
+            p=p->next;
+        }
+        t->next=q->next;
+        q->next=t;
+    }
+}
+
+void delete(struct node*p,int pos)
+{
+    int x,i;
+    struct node *q=NULL;
+    if(pos==0 && p)
+    {
+        first=first->next;
+        x=p->data;
+        printf("\n Deleted value is: %d",p->data);
+        free(p);
+    }
+    else if(pos>0 && pos<count(p))
+    {
+        for(i=0;i<pos;i++)
+        {
+            q=p;
+            p=p->next;
+        }
+        q->next=p->next;
+        x=p->data;
+        printf("\n Deleted value is: %d",p->data);
+        free(p);
+    }
+}
+void display(struct node *p)
+{
+    if(p!=NULL)
+    {
+        printf("%d ",p->data);
+        display(p->next);
+    }
+}
+
+int sc(struct node *p)
+{
+    struct node *q=NULL;
+    q=p;
+    p=p->next;
+    while(p)
+    {
+       if(q->data<p->data && p)
+       {
+           q=q->next;
+           p=p->next;
+       }
+       else
+       {
+           return 0;
+       }
+    }
+    return 1;
+}
+
+void dup(struct node *p)
+{
+    struct node *q=p->next;
+    while(q!=NULL)
+    {
+        if(p->data!=q->data)
+        {
+            p=q;
+            q=q->next;
+
+        }
+        else
+        {
+            p->next=q->next;
+            free(q);
+            q=p->next;
+        }
+    }
+}
+
+void revs(struct node *p)
+{
+    int i=0;
+    int x=count(p);
+    int *A=(int *)malloc(x*sizeof(int));
+    while(p!=0)
+    {
+        A[i]=p->data;
+        p=p->next;
+        i++;
+    }
+    p=first;
+    i--;
+    while(p!=0)
+    {
+        p->data=A[i];
+        p=p->next;
+        i--;
+    }
+}
+
+void revlink(struct node *p)
+{
+    struct node *q=NULL;
+    struct node *r=NULL;
+    while(p!=0)
+    {
+        r=q;
+        q=p;
+        p=p->next;
+        q->next=r;
+    }
+    first=q;
+}
+
+void revrec(struct node *q,struct node *p)
+{
+    if(p!=0)
+    {
+        revrec(p,p->next);
+        p->next=q;
+    }
+    else
+    {
+        first=q;
+    }
+}
+
+int main()
+{
+    int ans,index,data,c,x;
+    while(1)
+    {
+        printf("\n Want Menu? 1 for yes");
+        scanf("%d",&ans);
+        if(ans==1)
+        {
+            printf("\n 1.Insert");
+            printf("\n 2.Display");
+            printf("\n 3.Count");
+            printf("\n 4.Sorted Insert");
+            printf("\n 5.Deletion");
+            printf("\n 6.Sort Check");
+            printf("\n 7.Removing Duplicate");
+            printf("\n 8.Reverse Elements");
+            printf("\n 9.Reverse Links using Sliding Pointers ");
+            printf("\n 10.Removing links using Recursion");
+            printf("\n 11.exit");
+        }
+        printf("\n Enter your choice: ");
+        scanf("%d",&c);
+        switch(c)
+           {
+               case 1:
+                   printf("\n Enter Index");
+                   scanf("%d",&index);
+                   printf("\n Enter Data");
+                   scanf("%d",&data);
+                   insert(first,index,data);
+                   break;
+
+               case 2:
+                   display(first);
+                   break;
+
+               case 3:
+                   printf("\n Total Nodes are: %d",count(first));
+                   break;
+
+               case 4:
+                   printf("\n Enter Data");
+                   scanf("%d",&data);
+                   sinsert(first,data);
+                   break;
+
+               case 5:
+                   printf("\n Enter Index");
+                   scanf("%d",&index);
+                   delete(first,index);
+                   break;
+
+               case 6:
+                   x=sc(first);
+                   if(x==1)
+                   {
+                       printf("\n Array is Sorted");
+                   }
+                   else
+                   {
+                       printf("\n Array is Not Sorted");
+                   }
+                   break;
+
+              case 7:
+                  dup(first);
+                  break;
+
+              case 8:
+                  revs(first);
+                  break;
+
+              case 9:
+                  revlink(first);
+                  break;
+
+              case 10:
+                  revrec(NULL,first);
+                  break;
+                  
+              case 11:
+                  exit(0);
+                  
+              default:
+                   printf("\n Please Enter Right Choice");
+
+        }
+    }
+    return 0;
+}
