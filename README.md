@@ -108,6 +108,9 @@ I am currently doing work on it. So, in some days I will complete this repositor
   * [Add Two Polynomial Equations](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Sparse%20Matrix%20and%20Polynomial%20Represantation/Add%20Two%20Polynomial%20Equations)
   
   ### 4. Linked List
+  
+  :blue_book: Linked List
+  
   * [Create and Display Linked List](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Linked%20List/Create%20and%20Display%20Linked%20List)
   * [Display and Reverse Display Recursively](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Linked%20List/Display%20and%20Reverse%20Display%20Recursively)
   * [Counting Nodes](https://github.com/devarshitrivedi01/DSA-nerd/blob/main/Linked%20List/Counting%20Nodes)
